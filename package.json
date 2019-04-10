@@ -1,14 +1,23 @@
 {
   "name": "taller2_web",
   "version": "1.0.0",
-  "description": "taller 2 de Programacion WEB",
+  "description": "taller 2 web",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vavi03/talller2WEB.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vavi03/talller2WEB/issues"
+  },
+  "homepage": "https://github.com/vavi03/talller2WEB#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2"
   }
 }
