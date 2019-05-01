@@ -1,52 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>SHAFT SHOP</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Nunito:300,400|Teko" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/tienda.css">
+     <link rel="stylesheet" href="./styles/libs/hover.css">
 </head>
+
 <body>
-    
-     <header class="encab">
-        <a href="" class="profile"></a>
-        <a href="" class="car"></a>
-        <a href="" class="search"></a>
-        <img src="" alt="" class="logo">
 
-    </header>
+    <div class="app">
+        <header class="encab">
+            <img src="./img/tienda/logo.png" alt="" class="logo-pag">
+            <div class="opciones-encab">
+                <a href="" class="car"><img src="/public/img/tienda/car.png" alt=""></a>
+                <a href="" class="search"></a>
+            </div>
 
-    <section class="categories">
-        <h1 class="categories__title">Categories</h1>
-        <a href="" class="shirts"></a>
-        <a href="" class="blurays"></a>
-        <a href="" class="posters"></a>
-    </section>
+        </header>
 
-     <section class="series">
-        <h1 class="series__title">By Series</h1>
-        <a href="" class="shirts"></a>
-        <a href="" class="blurays"></a>
-        <a href="" class="posters"></a>
-    </section>
-    
+        <section class="categories">
+            <div class="categories__content">
+                <div class="categories__contTitle">
+                    <h1 class="categories__title">Categories</h1>
+                </div>
+                <div class="categories__opciones">
+                    <a href="" class="shirts categories__opcion">
+                        <h3>Shirts</h3>
+                    </a>
+                    <a href="" class="blurays categories__opcion"><h3>Bags</h3></a>
+                    <a href="" class=" categories__opcion books"><h3>Books</h3></a>
+                </div>
+            </div>
+        </section>
 
-    <section class="list">
+        <section class="series">
+            <div class="series__content">
+                <div class="series__contTitle">
+                    <h1 class="series__title">By Series</h1>
+                </div>
+                <div class="series__opciones">
+                    <a href="" class="series__opcion march"><h3>March comes in <br> like a lion</h3></a>
+                    <a href="" class="series__opcion fate"><h3>Fate Extra<br> Last Encore</h3></a>
+                    <a href="" class="series__opcion mono"><h3>Monogatari</h3></a>
+                </div>
+            </div>
+        </section>
 
-        <h1 class="list__title">Product List</h1>
+
+        <section class="list">
+          
+            <div class="list__contTitle">
+                <h1 class="list__title">Product List</h1>
+            </div>
+            
         <h4>sort by</h4>
+            <div class="list__productos">
+                {{#each lista}}
+                <div class="producto">
+                   <a href="/tienda/{{id}}" class="producto__link hvr-bounce-to-right">
+                   <div class="producto__imagen">
+                       <img src="" alt="">
+                   </div>
+                    <p class="producto__nombre">{{nombre}}</p>
+                    <p class="producto__precio">${{precio}}</p>
+                    </a>
+                </div>
+
+                {{/each}}
+            </div>
+    
+        </section>
 
 
 
-        <div class="producto-item">
-            <img src="{{imagen}}" alt="" class="producto-item__imagen">
-            <p class="producto-item__nombre">{{nombre}}</p>
-            <p class="producto-item__precio">{{precio}}</p>
-        </div>
-
-    </section>
-
-     <footer class="footer">
+        <footer class="footer">
 
             <div class="footer__content">
                 <img class="footer__redes" src="./img/redes.png" alt="">
@@ -60,5 +92,7 @@
 
 
         </footer>
+    </div>
 </body>
+
 </html>
