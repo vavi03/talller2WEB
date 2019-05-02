@@ -1,0 +1,96 @@
+$margen: 70%;
+
+$mainColor: #EF7F7B;
+$greenColor: #BFEC4A;
+$whiteColor: rgb(250, 250, 250);
+$blackColor: rgb(45, 45, 45);
+$grayColor: #898787;
+
+$secondFont: 'Montserrat',
+sans-serif;
+$mainFont: 'Teko',
+sans-serif;
+$thirdFont: 'Nunito',
+sans-serif;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.app {
+    background: $whiteColor;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-content: center;
+    align-items: center;
+}
+
+.encab {
+  
+   position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 160px;
+    width: $margen;
+    justify-content: center;
+
+    .logo-pag {
+        align-self: center;
+        width: 228.99px;
+    }
+
+    .opciones-encab {
+        width:37px;
+        position: absolute;
+        right:0;
+    }
+    .car{
+        width:100%;
+        >img{
+          width:100%;
+        }
+    }
+}
+
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 250px;
+
+    &__content {
+        display: flex;
+        width: $margen;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: space-between;
+
+
+    }
+
+    &__redes {
+        width: 20px;
+        height: 84px;
+    }
+
+    &__link {
+        font-family: $mainFont;
+        font-size: 16px;
+        text-align: right;
+        letter-spacing: 0.08em;
+        font-weight: 300;
+        color: $grayColor;
+    }
+
+
+}

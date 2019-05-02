@@ -75,11 +75,11 @@ productos.push({
     descripcion: 'Because it is a nylon material, it is light and bulky and can be used as a sub bag. Simply as it is, you can enjoy arranging it with your favorite can badge! It is also useful for wallets and cell phones for events.',
 },
 {
-    nombre: '',
-    id: 'monoshirt2',
+    nombre: 'Candy T-shirt',
+    id: 'monoshirt3',
     precio: '10000',
     imagen: 'https://shaftten.fs-storage.jp/fs2cabinet/det/detail-SH00021/detail-SH00021-m-01-dl.jpg',
-    descripcion: '',
+    descripcion: 'The drawing by the theater company Inukare. We express "witch of sweets" of "Magical Girl Madoka ☆ Magica" in the atmosphere like a childrens book.',
 },
 
  );
