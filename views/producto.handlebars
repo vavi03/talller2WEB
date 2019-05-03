@@ -6,33 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{nombre}}</title>
-    <link rel="stylesheet" href="./styles/product.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Nunito:300,400|Teko" rel="stylesheet">
+     <link rel="stylesheet" href="../styles/libs/hover.css">
+    <link rel="stylesheet" href="../styles/product.css">
 </head>
 
 <body>
 
-<div class="app">
-    <header class="encab">
-            <img src="./img/tienda/logo.png" alt="" class="logo-pag">
+    <div class="app">
+        <header class="encab">
+            <img src="../img/tienda/logo.png" alt="" class="logo-pag">
             <div class="opciones-encab">
-                <a href="" class="car"><img src="/public/img/tienda/car.png" alt=""></a>
+                <a href="" class="car"><img src="../img/tienda/car.png" alt=""></a>
                 <a href="" class="search"></a>
             </div>
 
         </header>
 
-  <section class="producto">
-<img src="{{imagen}}" alt="" class="producto__imagen">
+        <section class="producto">
+            <img src="{{imagen}}" alt="" class="producto__imagen">
 
-<h2 class="producto__nombre">{{nombre}}</h2>
-<p class="producto__descrip">{{descripcion}}</p>
-<a href="" class="producto__btn"></a>
-  </section>
+            <h2 class="producto__nombre">{{nombre}}</h2>
+            <p class="producto__descrip">{{descripcion}}</p>
+            <a href="" class="producto__btn"></a>
+        </section>
 
-  <footer class="footer">
+        <footer class="footer">
 
             <div class="footer__content">
-                <img class="footer__redes" src="./img/redes.png" alt="">
+                <img class="footer__redes" src="../img/redes.png" alt="">
                 <div class="footer__links">
                     <h4 class="footer__link">About us</h4>
                     <h4 class="footer__link">Top Works</h4>
@@ -44,8 +46,8 @@
 
         </footer>
 
-</div>
- 
+    </div>
+
 </body>
 
 </html>

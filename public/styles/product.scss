@@ -31,19 +31,19 @@ sans-serif;
 }
 
 .encab {
-  
-   position: relative;
+    
+    position: relative;
     display: flex;
     flex-direction: column;
     flex-basis: 160px;
     width: $margen;
     justify-content: center;
-
+    
     .logo-pag {
         align-self: center;
         width: 228.99px;
     }
-
+    
     .opciones-encab {
         width:37px;
         position: absolute;
@@ -52,7 +52,7 @@ sans-serif;
     .car{
         width:100%;
         >img{
-          width:100%;
+            width:100%;
         }
     }
 }
@@ -66,7 +66,7 @@ sans-serif;
     align-content: center;
     align-items: center;
     height: 250px;
-
+    
     &__content {
         display: flex;
         width: $margen;
@@ -74,15 +74,15 @@ sans-serif;
         flex-wrap: nowrap;
         justify-content: space-between;
         align-content: space-between;
-
-
+        
+        
     }
-
+    
     &__redes {
         width: 20px;
         height: 84px;
     }
-
+    
     &__link {
         font-family: $mainFont;
         font-size: 16px;
@@ -91,6 +91,6 @@ sans-serif;
         font-weight: 300;
         color: $grayColor;
     }
-
-
+    
+    
 }

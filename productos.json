@@ -1,57 +1,162 @@
 [
 
     {
-        "name": "March Lion's meow tote bag",
-        "serie": "March comes in like a Lion",
-        "category": "Bags",
-        "price": 50000,
-        "descrip": "Body: 420mm x 380mm x 130mm Handle: about 30mm x 550mm"
-        
+        nombre: 'March Lions Meow Tote Bag ',
+        id: 0,
+        precio: '10000',
+        imagen: 'https://shaftten.fs-storage.jp/fs2cabinet/det/detail-SH00009/detail-SH00009-m-01-dl.jpg',
+        descripcion: 'Body: 420mm x 380mm x 130mm Handle: about 30mm x 550mm',
     },
+    //2
     {
-        "name": "March Lion's meow tote bag",
-        "serie": "March comes in like a Lion",
-        "category": "Bags",
-        "price": 50000,
-        "descrip": "Body: 420mm x 380mm x 130mm Handle: about 30mm x 550mm"
-        
+        nombre: 'Fate EXTRA Last Encore Tote Bag Saver (2 cans included)',
+        id: 1,
+        precio: '10000',
+        imagen: 'https://shaftten.fs-storage.jp/fs2cabinet/det/detail-SH00222/detail-SH00222-m-01-dl.jpg',
+        descripcion: 'Three new tote bags from "Fate / EXTRA Last Encore"! Design is drawn by SE.RA.PH letters of Saber Archer Gawains treasure name! Each tote bag comes with a can badge designed with the illustration of the Servant and the master curse.'
     },
+    //3
     {
-        "name": "March Lion's meow tote bag",
-        "serie": "March comes in like a Lion",
-        "category": "Bags",
-        "price": 50000,
-        "descrip": "Body: 420mm x 380mm x 130mm Handle: about 30mm x 550mm"
-        
+        nombre: 'March Lion Production Notes [Collection of setting materials]',
+        id: 2,
+        precio: '10000',
+        imagen: 'https://shaftten.fs-storage.jp/fs2cabinet/det/detail-SH00003/detail-SH00003-m-01-dl.jpg',
+        descripcion: 'The cover illustrations are character designer Nobuhiro Sugiyama and the sisters of Mr. Zero and Mr. Kawamoto, who have Kuro-chan drawn down. Finished with an image like a Japanese painting. Nobuhiro Sugiyama (front cover illustration): We aimed to create a warm painting with an emphasis on atmosphere, different from cell painting in animation. I hope you can feel the air in the original here.',
     },
+    //4
     {
-        "name": "March Lion's meow tote bag",
-        "serie": "March comes in like a Lion",
-        "category": "Bags",
-        "price": 50000,
-        "descrip": "Body: 420mm x 380mm x 130mm Handle: about 30mm x 550mm"
-        
+        nombre: 'Fate / EXTRA Last Encore ED Illustration Book',
+        id: 3,
+        precio: '10000',
+        imagen: 'https://shaftten.fs-storage.jp/fs2cabinet/det/detail-SH00306/detail-SH00306-m-01-dl.jpg',
+        descripcion: 'All 13 kinds of patterns drawn down for each episode are also included, and all 26 illustrations are finished with high definition printing. The body contains a transparent sleeve case.',
     },
-
+    //5
     {
-        "name": "March Lion's meow tote bag",
-        "serie": "March comes in like a Lion",
-        "category": "Bags",
-        "price": 50000,
-        "descrip": "Body: 420mm x 380mm x 130mm Handle: about 30mm x 550mm"
-        
+        nombre: 'Shinobu Oshino "Panoi!" T-shirt M size',
+        id: 4,
+        precio: '10000',
+        imagen: 'https://shaftten.fs-storage.jp/fs2cabinet/det/detail-SH00159/detail-SH00159-m-01-dl.jpg',
+        descripcion: 'Shinobu Oshino "Panoi!" T-shirt.  It is a cute T-shirt that looks into the hole of the favorite donut!',
     },
-
-
-
-
-
-
-
-
-
-
-
-
-
+    //6
+    {
+        nombre: 'Shaft Logo T-shirt Black',
+        id: 5,
+        precio: '10000',
+        imagen: 'https://shaftten.fs-storage.jp/fs2cabinet/det/detail-SH00201/detail-SH00201-m-01-dl.jpg',
+        descripcion: 'It is a simple, easy to match two colors of black and white. Wear it under the shirt and show the logo, and it is easy to put on the badge of your favorite character and arrange it.'
+    },
+    //7
+    {
+        nombre: 'T-shirt <Story Series> Shinobu Oshino / Makoto Hachikuji / Yunogi ',
+        id: 6,
+        precio: '10000',
+        imagen: 'https://shaftten.fs-storage.jp/fs2cabinet/det/detail-SH00021/detail-SH00021-m-01-dl.jpg',
+        descripcion: 'I made a full-color T-shirt wearing a white dress and playing with soap bubbles "Shinobu Oshino", "Hachikuji Makoto", and "Ko Nogi Yousuke". The ground color of the T-shirt is gray. You can wear it to Sharp.',
+    },
+    //8
+    {
+        nombre: 'March March Lion T-shirt',
+         id: 7,
+        precio: '10000',
+        imagen: 'https://shaftten.fs-storage.jp/fs2cabinet/det/detail-SH00021/detail-SH00021-m-01-dl.jpg',
+        descripcion: 'From the TV anime "Moon Lion", T-shirts are new! It is a lovely item designed "Nya Shogi" that is a fake cat made of a piece of shogi that appears in the work. ',
+    },
+    //9
+    {
+        nombre: 'shaft logo bag ',
+        id: 8,
+        precio: '10000',
+        imagen: 'https://shaftten.fs-storage.jp/fs2cabinet/det/detail-SH00021/detail-SH00021-m-01-dl.jpg',
+        descripcion: 'Because it is a nylon material, it is light and bulky and can be used as a sub bag. Simply as it is, you can enjoy arranging it with your favorite can badge! It is also useful for wallets and cell phones for events.',
+    },
+    //10
+    {
+        nombre: 'Candy T-shirt',
+        id: 9,
+        precio: '10000',
+        imagen: 'https://shaftten.fs-storage.jp/fs2cabinet/det/detail-SH00021/detail-SH00021-m-01-dl.jpg',
+        descripcion: 'The drawing by the theater company Inukare. We express "witch of sweets" of "Magical Girl Madoka ☆ Magica" in the atmosphere like a childrens book.',
+    },
+    //11
+    {
+        nombre: 'Monogatari/Nekomonogatari(black) PRODUCTION NOTE [setting materials collection]',
+        id: 10,
+        precio: '10000',
+        imagen: 'https://shaftten.fs-storage.jp/fs2cabinet/det/detail-SH00021/detail-SH00021-m-01-dl.jpg',
+        descripcion: 'Includes character settings, art boards and ED materials. The ED material page has been designed and designed by Ueda Hajime.',
+    },
+    //12
+    {
+        nombre: 'March Lions meow Shogi Tote Bag',
+        id: 11,
+        precio: '10000',
+        imagen: 'https://shaftten.fs-storage.jp/fs2cabinet/det/detail-SH00021/detail-SH00021-m-01-dl.jpg',
+        descripcion: 'The meow shogi tote bag is on sale from the TV anime "Moon Lion". We are designing "Nyan Shogi" which is a fake cat of Shogi piece that appears in the work! It is an easy-to-use recommended item for shopping and commuting.',
+    },
+    //13
+    {
+        nombre: 'Fate / EXTRA CCC x Fate / Grand Order Special Event Deep-sea Electric Brain Rect SE.RA.PH COMPLETE CM COLLECTION',
+        id: 12,
+        precio: '10000',
+        imagen: 'https://shaftten.fs-storage.jp/fs2cabinet/det/detail-SH00021/detail-SH00021-m-01-dl.jpg',
+        descripcion: 'Original illustrations from the Parapara Manga style that includes all the original images used in the Special Event Notification CM! You can enjoy yourself while moving a number of dynamic originals. Also included is a drawn illustration card by Makoto Takiyama of anime character design, and a cut-out illustration card x 3 (Nero Claudius [Bride], Suzuka Gozen, Tamamocat) drawn by a drawn mini character!',
+    },
+    //14
+    {
+        nombre: 'Fate / EXTRA Last Encore Saber',
+        id: 13,
+        precio: '10000',
+        imagen: 'https://shaftten.fs-storage.jp/fs2cabinet/det/detail-SH00021/detail-SH00021-m-01-dl.jpg',
+        descripcion: 'Saber tapestries are on sale from "Fate / EXTRA Last Encore"! It is an item of great power using illustrations drawn by Yurakucho shaft original drawings exhibition.',
+    },
+    //15
+    {
+        nombre: 'Fate / EXTRA Last Encore Ending Illustration',
+        id: 14,
+        precio: '10000',
+        imagen: 'https://shaftten.fs-storage.jp/fs2cabinet/det/detail-SH00021/detail-SH00021-m-01-dl.jpg',
+        descripcion: 'It will be a powerful item that designed ED illustrations of the last episode of the TV anime by Mieko Hosoi!',
+    },
+    //16
+    {
+        nombre: 'March Lion Postcard Set',
+        id: 15,
+        precio: '10000',
+        imagen: 'https://shaftten.fs-storage.jp/fs2cabinet/det/detail-SH00021/detail-SH00021-m-01-dl.jpg',
+        descripcion: 'Character Designs The zero, Kawamoto family three sisters and meows, who were painted with watercolor-like touches by Nobuhiro Sugiyama, became post cards. Soft texture paper is used to make the image of the picture alive.',
+    },
+    //17
+    {
+        nombre: 'final story Trainer (Ueda Hajime)',
+        id: 16,
+        precio: '10000',
+        imagen: 'https://shaftten.fs-storage.jp/fs2cabinet/det/detail-SH00021/detail-SH00021-m-01-dl.jpg',
+        descripcion: 'Design Shinobu Oshino at one point on the chest, while the front is simple, and design the Hitagi Senjogahara and Araragi calendar in the dance of petals on the back print. The material is 100% cotton, the color of the body is navy and brings out the world of illustration. Please enjoy the continuation of the story. ',
+    },
+    //18
+    {
+        nombre: 'Bakemonogatari key animation notes ',
+        id: 17,
+        precio: '10000',
+        imagen: 'https://shaftten.fs-storage.jp/fs2cabinet/det/detail-SH00021/detail-SH00021-m-01-dl.jpg',
+        descripcion: 'Original illustrations from the Parapara Manga style that includes all the original images used in the Special Event Notification CM! You can enjoy yourself while moving a number of dynamic originals. Also included is a drawn illustration card by Makoto Takiyama of anime character design, and a cut-out illustration card x 3 (Nero Claudius [Bride], Suzuka Gozen, Tamamocat) drawn by a drawn mini character!',
+    },
+    //19
+    {
+        nombre: 'Fate / EXTRA CCC x Fate / Grand Order Special Event Deep-sea Electric Brain Rect SE.RA.PH COMPLETE CM COLLECTION',
+        id: 18,
+        precio: '10000',
+        imagen: 'https://shaftten.fs-storage.jp/fs2cabinet/det/detail-SH00021/detail-SH00021-m-01-dl.jpg',
+        descripcion: 'Original illustrations from the Parapara Manga style that includes all the original images used in the Special Event Notification CM! You can enjoy yourself while moving a number of dynamic originals. Also included is a drawn illustration card by Makoto Takiyama of anime character design, and a cut-out illustration card x 3 (Nero Claudius [Bride], Suzuka Gozen, Tamamocat) drawn by a drawn mini character!',
+    },
+    //20
+    {
+        nombre: 'Fate / EXTRA CCC x Fate / Grand Order Special Event Deep-sea Electric Brain Rect SE.RA.PH COMPLETE CM COLLECTION',
+        id: 19,
+        precio: '10000',
+        imagen: 'https://shaftten.fs-storage.jp/fs2cabinet/det/detail-SH00021/detail-SH00021-m-01-dl.jpg',
+        descripcion: 'Original illustrations from the Parapara Manga style that includes all the original images used in the Special Event Notification CM! You can enjoy yourself while moving a number of dynamic originals. Also included is a drawn illustration card by Makoto Takiyama of anime character design, and a cut-out illustration card x 3 (Nero Claudius [Bride], Suzuka Gozen, Tamamocat) drawn by a drawn mini character!',
+    }
 ]
