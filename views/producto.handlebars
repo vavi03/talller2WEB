@@ -6,29 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{nombre}}</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Nunito:300,400|Teko" rel="stylesheet">
-     <link rel="stylesheet" href="../styles/libs/hover.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Nunito:300,400,500,600|Teko" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/libs/hover.css">
+  <link rel="stylesheet" href="../styles/libs/swiper.css">
     <link rel="stylesheet" href="../styles/product.css">
 </head>
 
 <body>
 
     <div class="app">
-        <header class="encab">
-            <img src="../img/tienda/logo.png" alt="" class="logo-pag">
+       <header class="encab">
+            <img src="./img/tienda/logo.png" alt="" class="logo-pag">
             <div class="opciones-encab">
-                <a href="" class="car"><img src="../img/tienda/car.png" alt=""></a>
-                <a href="" class="search"></a>
+                <div class="car">
+                 <p class="car__num"></p>
+                <a href="/carro" class="car__link"><img src="./img/tienda/car.png" alt=""></a>
+              </div>
+              <div class="search">
+                <a href="" class="search__link"><img src="./img/tienda/buscar.png" alt=""></a>
+            </div>
             </div>
 
         </header>
 
         <section class="producto">
-            <img src="{{imagen}}" alt="" class="producto__imagen">
+            <div class="producto__content">
+                <img src="{{imagen}}" alt="" class="producto__imagen">
 
-            <h2 class="producto__nombre">{{nombre}}</h2>
-            <p class="producto__descrip">{{descripcion}}</p>
-            <a href="" class="producto__btn"></a>
+                <div class="producto__txt">
+                    <div class="producto__contTitle">
+                        <h2 class="producto__title">{{nombre}}</h2>
+                    </div>
+                    <p class="producto__descrip">{{descripcion}}</p>
+                    <p class="producto__precio">${{precio}}</p>
+                    <a href="" class="producto__btn">Add to cart</a>
+                </div>
+            </div>
         </section>
 
         <footer class="footer">
@@ -47,6 +60,8 @@
         </footer>
 
     </div>
+
+    <script src="/js/tienda.js"></script>
 
 </body>
 

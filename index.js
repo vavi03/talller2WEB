@@ -28,6 +28,7 @@ MongoClient.connect('mongodb+srv://cluster0-vr7bh.mongodb.net/shaft?retryWrites=
     db = client.db('shaft');
 
     // Iniciar servidor
+    console.log("escuchando en el puerto 3000!");
     app.listen(process.env.PORT || 3000);
 });
 
@@ -66,18 +67,46 @@ app.get('/tienda', function (req, res) {
 
     
 });
+/*
+app.get('/tienda/categoria?', function(req,res){
+ var query={};
+ if(req.params.categoria){
+     query.categoria= req.params.categoria;
+ }
+ if(req.params.precio){
+     query.precio= {$lte:req.query.precio};
+ }
 
+ var productos= db.collection('productos');
+ productos.find(query).toArray((err,resultList)=>{
+    contexto=resultList;
+res.render()
+ });
+});
+*/
 app.get('/producto/:id', function(req,res){
 
     var contexto=null;
+    var query= {};
+    if(req.params.id){
+        query.id= parseInt(req.params.id);
+        
+    }
 
-    var productos = db.collection('productos').find({
-        id: parseInt(req.params.id)
-    }).toArray((err, resultList) => {
+    var productos = db.collection('productos').find(query).toArray((err, resultList) => {
        
         contexto = resultList[0];
 
         res.render('producto', contexto);
     });
+
+});
+
+app.get('/carro', function(req,res){
+
+    var contexto=null;
+
+   res.render('carrito', contexto);
+  
 
 });
