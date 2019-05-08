@@ -53,44 +53,45 @@ sans-serif;
         align-content: center;
         align-items: flex-end;
     }
-    .car{
-        width:100%;
-        margin-bottom:10px;
+
+    .car {
+        width: 100%;
+        margin-bottom: 10px;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: flex-end;
 
-        &__num{
-           
+        &__num {
+
             font-family: $thirdFont;
             font-size: 30px;
             color: $grayColor;
-            
-            
+
         }
 
-        &__link{
-        >img{
-          width:100%;
+        &__link {
+            >img {
+                width: 100%;
+            }
         }
+
     }
-        
-    }
-    .search{
-        width:80%;
-        margin-bottom:10px;
+
+    .search {
+        width: 80%;
+        margin-bottom: 10px;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: flex-end;
-       
 
-        &__link{
-        >img{
-          width:100%;
+
+        &__link {
+            >img {
+                width: 100%;
+            }
         }
-    }
     }
 }
 
@@ -155,7 +156,7 @@ sans-serif;
     }
 
     &__title {
-        text-align: right;
+        text-align: left;
         font-family: $mainFont;
         font-size: 30px;
         letter-spacing: 0.08em;
@@ -169,12 +170,46 @@ sans-serif;
         margin-bottom: 20px;
     }
 
-    &__precio{
+    &__precio {
         font-family: $thirdFont;
         font-weight: 600;
         color: $blackColor;
-        margin-bottom:20px;
+        margin-bottom: 20px;
         font-size: 30px;
+
+    }
+
+    &__cant {
+        width: 150px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+
+        .cant {
+            font-family: $thirdFont;
+            font-size: 20px;
+
+            &__barra {
+                width: 50px;
+                background: transparent;
+                border: none;
+
+            }
+
+            &__num {
+                font-family: $thirdFont;
+
+                &:hover {
+                    background: $mainColor;
+                }
+            }
+
+
+
+        }
+
 
     }
 
@@ -183,7 +218,7 @@ sans-serif;
         color: $blackColor;
         font-size: 14px;
         letter-spacing: 0.05em;
-        
+
         text-decoration: none;
         background-color: $greenColor;
 
@@ -199,6 +234,72 @@ sans-serif;
 
 }
 
+.cartinfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding-top: 50px;
+    background: $whiteColor;
+    width: $margen;
+    height: auto;
+    flex-shrink: 0;
+
+    &__contTitle {
+        width: 100%;
+        height: auto;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+
+        &::after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background-color: $blackColor;
+            display: flex;
+            flex-shrink: 0;
+        }
+    }
+
+    &__title {
+        text-align: right;
+        font-family: $mainFont;
+        font-size: 30px;
+        letter-spacing: 0.08em;
+        color: $blackColor;
+    }
+
+    &__titles {
+        display: flex;
+        width: 80%;
+        flex-direction: row;
+        justify-content: space-around;
+      
+        margin-top: 50px;
+
+        >h4 {
+            font-family: $thirdFont;
+            font-size: 20px;
+            margin-right: 50px;
+            font-weight: 600;
+        }
+    }
+
+    .car-list {
+        width: 100%;
+        height: 500px;
+        font-family: $secondFont;
+        display: flex;
+        flex-direction: column;
+
+    }
+}
 
 .footer {
     width: 100%;

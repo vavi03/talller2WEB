@@ -8,23 +8,23 @@
     <title>{{nombre}}</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Nunito:300,400,500,600|Teko" rel="stylesheet">
     <link rel="stylesheet" href="../styles/libs/hover.css">
-  <link rel="stylesheet" href="../styles/libs/swiper.css">
+    <link rel="stylesheet" href="../styles/libs/swiper.css">
     <link rel="stylesheet" href="../styles/product.css">
 </head>
 
 <body>
 
     <div class="app">
-       <header class="encab">
-            <img src="./img/tienda/logo.png" alt="" class="logo-pag">
+        <header class="encab">
+            <img src="../img/tienda/logo.png" alt="" class="logo-pag">
             <div class="opciones-encab">
                 <div class="car">
-                 <p class="car__num"></p>
-                <a href="/carro" class="car__link"><img src="./img/tienda/car.png" alt=""></a>
-              </div>
-              <div class="search">
-                <a href="" class="search__link"><img src="./img/tienda/buscar.png" alt=""></a>
-            </div>
+                    <p class="car__num"></p>
+                    <a href="/carro" class="car__link"><img src="../img/tienda/car.png" alt=""></a>
+                </div>
+                <div class="search">
+                    <a href="" class="search__link"><img src="../img/tienda/buscar.png" alt=""></a>
+                </div>
             </div>
 
         </header>
@@ -39,6 +39,20 @@
                     </div>
                     <p class="producto__descrip">{{descripcion}}</p>
                     <p class="producto__precio">${{precio}}</p>
+                    <div class="producto__cant">
+                        <p class="cant">Quantity</p>
+                        <select class="cant__barra">
+                            <option class="cant__num" value="">1</option>
+                            <option class="cant__num" value="">2</option>
+                            <option class="cant__num" value="">3</option>
+                            <option class="cant__num" value="">4</option>
+                            <option class="cant__num" value="">5</option>
+                            <option class="cant__num" value="">6</option>
+                            <option class="cant__num" value="">7</option>
+                            <option class="cant__num" value="">8</option>
+
+                        </select>
+                    </div>
                     <a href="" class="producto__btn">Add to cart</a>
                 </div>
             </div>

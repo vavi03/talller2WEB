@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Shaft Shop Shopping Car</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Nunito:300,400|Teko" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/product.css">
 </head>
 
 <body>
@@ -15,19 +17,50 @@
         <header class="encab">
             <img src="../img/tienda/logo.png" alt="" class="logo-pag">
             <div class="opciones-encab">
-                <a href="/carro" class="car"><img src="../img/tienda/car.png" alt=""></a>
-                <p class="carritonum"></p>
-                <a href="" class="search"><img src="../img/tienda/buscar.png" alt=""></a>
+                <div class="car">
+                    <p class="car__num"></p>
+                    <a href="/carro" class="car__link"><img src="../img/tienda/car.png" alt=""></a>
+                </div>
+                <div class="search">
+                    <a href="" class="search__link"><img src="../img/tienda/buscar.png" alt=""></a>
+                </div>
             </div>
 
         </header>
 
-        <div class="lista-carrito">
+        <section class="cartinfo">
+
+            <div class="cartinfo__contTitle">
+                <h1 class="cartinfo__title">Shopping Cart</h1>
+            </div>
+
+            <div class="cartinfo__titles">
+                <h4>Products</h4>
+                <h4>Quantity</h4>
+                <h4>Price</h4>
+            </div>
+            <div class="car-list">
 
 
-        </div>
+            </div>
+
+
+        </section>
     </div>
+    <footer class="footer">
 
+        <div class="footer__content">
+            <img class="footer__redes" src="./img/redes.png" alt="">
+            <div class="footer__links">
+                <h4 class="footer__link">About us</h4>
+                <h4 class="footer__link">Top Works</h4>
+                <h4 class="footer__link">Contact us</h4>
+                <h4 class="footer__link">Shop</h4>
+            </div>
+        </div>
+
+
+    </footer>
     <script src="/js/tienda.js"></script>
 
 </body>
