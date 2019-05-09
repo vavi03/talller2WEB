@@ -110,3 +110,11 @@ app.get('/carro', function(req,res){
   
 
 });
+app.get('/checkout', function(req,res){
+
+    var contexto=null;
+
+   res.render('checkout', contexto);
+  
+
+});
