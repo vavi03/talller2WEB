@@ -419,3 +419,98 @@ sans-serif;
 
 
 }
+
+
+@media (max-width:500px) {
+    .categories {
+      
+
+        &__opciones {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+    
+        &__opcion {
+    
+            position: relative;
+    
+            background: $mainColor;
+            width: 100%;
+            height: 80px;
+            margin-top: 20px;
+            text-decoration: none;
+            font-family: $secondFont;
+            color: $blackColor;
+            cursor: pointer;
+            margin-right: 0;
+        }
+      
+    
+        
+    }
+
+    .series{
+        &__opciones {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+    
+        &__opcion {
+            position: relative;
+            background: $mainColor;
+            width: 100%;
+            height: 80px;
+            margin-top: 20px;
+            text-decoration: none;
+            font-family: $secondFont;
+            color: $blackColor;
+            cursor: pointer;
+            margin-right: 0;
+            >h3 {
+                position: absolute;
+                bottom: 15px;
+                left: 15px;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .list {
+
+
+        &__productos {
+            margin-top:110px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            
+            justify-content: center;
+            align-content: center;
+           
+        }
+
+        .producto {
+        
+            flex-shrink: 0;
+            width: 240px;
+            height: auto;
+            margin-bottom: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-content: center;
+            align-items: center;
+    
+        }
+    }
+}

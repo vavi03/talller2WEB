@@ -298,6 +298,15 @@ sans-serif;
         display: flex;
         flex-direction: column;
 
+        .item-lista{
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+        }
+
     }
 }
 

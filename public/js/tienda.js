@@ -16,7 +16,7 @@ function paginaCargada() {
             listaCarrito.innerHTML = '';
 
             listaProductos.forEach(function (producto) {
-                listaCarrito.innerHTML += '<div class="item-lista"><img src="' + producto.imagen + '" width="100">' + producto.nombre+ '</div';
+                listaCarrito.innerHTML += '<div class="item-lista"><img src="' + producto.imagen + '" width="70">' + producto.nombre+ '</div';
             });
         }
     }
