@@ -31,14 +31,24 @@
 
         <section class="producto">
             <div class="producto__content">
-                <img src="{{imagen}}" alt="" class="producto__imagen">
+                <img src="{{producto.imagen}}" alt="" class="producto__imagen">
 
                 <div class="producto__txt">
                     <div class="producto__contTitle">
-                        <h2 class="producto__title">{{nombre}}</h2>
+                        <h2 class="producto__title">{{producto.nombre}}</h2>
                     </div>
-                    <p class="producto__descrip">{{descripcion}}</p>
-                    <p class="producto__precio">${{precio}}</p>
+                    <p class="producto__descrip">{{producto.descripcion}}</p>
+                    <p class="producto__precio">${{producto.precio}}</p>
+                    {{#if esShirt}}
+
+                    <div class="producto__tallas">
+                        <input type="radio" name="" value="s">S
+                        <input type="radio" name="" value="m">M
+                        <input type="radio" name="" value="l">L
+
+                    </div>
+
+                    {{/if}}
                     <div class="producto__cant">
                         <p class="cant">Quantity</p>
                         <select class="cant__barra">

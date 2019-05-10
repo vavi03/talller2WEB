@@ -181,6 +181,11 @@ sans-serif;
         font-size: 30px;
 
     }
+    &___tallas{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
 
     &__cant {
         width: 150px;

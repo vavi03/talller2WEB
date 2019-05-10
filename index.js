@@ -51,39 +51,63 @@ app.get('/', function (req, res) {
     };
     res.render('home', contexto);
 });
-
+/** 
 app.get('/tienda', function (req, res) {
-
+    
     var productos = db.collection('productos').find();
 
     productos.toArray((err, result) => {
         var contexto = {
 
-            lista: result
-    
+            lista: result,
+           
         };
         res.render('tienda', contexto);
     });
 
     
 });
-/*
-app.get('/tienda/categoria?', function(req,res){
+*/
+app.get('/tienda/:categoria?', function(req,res){
  var query={};
  if(req.params.categoria){
      query.categoria= req.params.categoria;
  }
- if(req.params.precio){
-     query.precio= {$lte:req.query.precio};
- }
-
+ 
+ 
  var productos= db.collection('productos');
  productos.find(query).toArray((err,resultList)=>{
-    contexto=resultList;
-res.render()
+    contexto={
+        lista:resultList,
+        categoria: req.params.categoria,
+        
+    };
+res.render('tienda', contexto);
  });
 });
-*/
+
+
+app.get('/tienda/:serie?', function(req,res){
+    var query={};
+    if(req.params.serie){
+        query.serie= req.params.serie;
+    }
+   
+    
+    var productos= db.collection('productos');
+    productos.find(query).toArray((err,resultList)=>{
+       contexto={
+           lista:resultList,
+           serie: req.params.serie,
+           
+       };
+   res.render('tienda', contexto);
+    });
+   });
+
+
+
+
 app.get('/producto/:id', function(req,res){
 
     var contexto=null;
@@ -93,10 +117,18 @@ app.get('/producto/:id', function(req,res){
         
     }
 
+    if(req.params.categoria){
+        query.categoria= req.params.categoria;
+    }
+
     var productos = db.collection('productos').find(query).toArray((err, resultList) => {
        
-        contexto = resultList[0];
+        contexto ={
 
+            producto :resultList[0],
+          
+           esShirt: req.params.categoria=="shirt",
+        }
         res.render('producto', contexto);
     });
 
@@ -107,14 +139,6 @@ app.get('/carro', function(req,res){
     var contexto=null;
 
    res.render('carrito', contexto);
-  
-
-});
-app.get('/checkout', function(req,res){
-
-    var contexto=null;
-
-   res.render('checkout', contexto);
   
 
 });

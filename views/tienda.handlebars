@@ -7,22 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SHAFT SHOP</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Nunito:300,400|Teko" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/libs/hover.css">
-    <link rel="stylesheet" href="./styles/tienda.css">
+    <link rel="stylesheet" href="../styles/libs/hover.css">
+    <link rel="stylesheet" href="../styles/tienda.css">
 </head>
 
 <body>
 
     <div class="app">
         <header class="encab">
-            <img src="./img/tienda/logo.png" alt="" class="logo-pag">
+            <img src="../img/tienda/logo.png" alt="" class="logo-pag">
             <div class="opciones-encab">
                 <div class="car">
                  <p class="car__num"></p>
-                <a href="/carro" class="car__link"><img src="./img/tienda/car.png" alt=""></a>
+                <a href="/carro" class="car__link"><img src="../img/tienda/car.png" alt=""></a>
               </div>
               <div class="search">
-                <a href="" class="search__link"><img src="./img/tienda/buscar.png" alt=""></a>
+                <a href="" class="search__link"><img src="../img/tienda/buscar.png" alt=""></a>
             </div>
             </div>
 
@@ -34,13 +34,13 @@
                     <h1 class="categories__title">Categories</h1>
                 </div>
                 <div class="categories__opciones">
-                    <a href="" class="shirts categories__opcion">
+                    <a href="/tienda/shirt" class="shirts categories__opcion">
                         <h3>Shirts</h3>
                     </a>
-                    <a href="" class="blurays categories__opcion">
+                    <a href="/tienda/bag" class="blurays categories__opcion">
                         <h3>Bags</h3>
                     </a>
-                    <a href="" class=" categories__opcion books">
+                    <a href="/tienda/booksposter" class=" categories__opcion books">
                         <h3>Books & Posters</h3>
                     </a>
                 </div>
@@ -53,13 +53,13 @@
                     <h1 class="series__title">By Series</h1>
                 </div>
                 <div class="series__opciones">
-                    <a href="" class="series__opcion march">
+                    <a href="/tienda/marchlion" class="series__opcion march">
                         <h3>March comes in <br> like a lion</h3>
                     </a>
-                    <a href="" class="series__opcion fate">
+                    <a href="/tienda/fateextra" class="series__opcion fate">
                         <h3>Fate Extra<br> Last Encore</h3>
                     </a>
-                    <a href="" class="series__opcion mono">
+                    <a href="/tienda/monogatari" class="series__opcion mono">
                         <h3>Monogatari</h3>
                     </a>
                 </div>
@@ -79,7 +79,7 @@
                 <div class="producto">
                     <a href="/producto/{{id}}" class="producto__link hvr-bounce-to-right">
                         <div class="producto__imagen">
-                            <img src="" alt="">
+                            <img src="{{imagen}}" alt="">
                         </div>
                         <p class="producto__nombre">{{nombre}}</p>
                         <p class="producto__precio">${{precio}}</p>
@@ -96,7 +96,7 @@
         <footer class="footer">
 
             <div class="footer__content">
-                <img class="footer__redes" src="./img/redes.png" alt="">
+                <img class="footer__redes" src="../img/redes.png" alt="">
                 <div class="footer__links">
                     <h4 class="footer__link">About us</h4>
                     <h4 class="footer__link">Top Works</h4>
