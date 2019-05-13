@@ -28,6 +28,12 @@
 
         </header>
 
+        {{#if mensaje}}
+
+        <h3>¡Pedido Enviado!</h3>
+
+        {{/if}}
+
         <section class="cartinfo">
 
             <div class="cartinfo__contTitle">
@@ -43,9 +49,59 @@
 
 
             </div>
+
+            <h4 id="total" >0</h4>
+
             <a href="/checkout" class="cartinfo__btn">Checkout</a>
+        </section>
+        
+        <section class="checkout">
+            <div class="checkout__content">
+
+
+                <div class="checkout__form">
+
+               
+
+                    <form action="/pedido" method="POST"  class="checkout__container">
+
+                        <input id="inputTotal" style="display: none;" value="0" class="espacio-email checkout__space" name="total" type="number">
+
+                        <div class="checkout__contTitle">
+                            <h1 class="checkout__titulo">Checkout</h1>
+                        </div>
+                        <div class="checkout__contElement">
+                            <label class="checkout__title">Full Name</label>
+                            <input class="espacio-name checkout__space" type="text" name="name" id="">
+
+                        </div>
+                        <div class="checkout__contElement">
+                            <label class="checkout__title">E-mail</label>
+                            <input class="espacio-email checkout__space" name="email" type="email">
+                        </div>
+
+                        <div class="checkout__contElement">
+                            <p class="checkout__title">Shipping Address</p>
+                            <div class="checkout__contElement">
+                                <label class="address__title">Country</label>
+                                <input class="espacio-pais checkout__space" name="pais" type="text">
+                                <label class="address__title">City</label>
+                                <input class="espacio-ciudad checkout__space" name="ciudad" type="text">
+                                <label class="address__title">Home Address</label>
+                                <input class="espacio-homeaddress checkout__space" name="dir" type="text">
+                            </div>
+                        </div>
+                        <button class="checkout__btn">Send</button>
+                    </form>
+                </div>
+
+
+            </div>
+
 
         </section>
+
+
     </div>
     <footer class="footer">
 

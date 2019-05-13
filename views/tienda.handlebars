@@ -18,12 +18,12 @@
             <img src="../img/tienda/logo.png" alt="" class="logo-pag">
             <div class="opciones-encab">
                 <div class="car">
-                 <p class="car__num"></p>
-                <a href="/carro" class="car__link"><img src="../img/tienda/car.png" alt=""></a>
-              </div>
-              <div class="search">
-                <a href="" class="search__link"><img src="../img/tienda/buscar.png" alt=""></a>
-            </div>
+                    <p class="car__num"></p>
+                    <a href="/carro" class="car__link"><img src="../img/tienda/car.png" alt=""></a>
+                </div>
+                <div class="search">
+                    <a href="" class="search__link"><img src="../img/tienda/buscar.png" alt=""></a>
+                </div>
             </div>
 
         </header>
@@ -53,13 +53,13 @@
                     <h1 class="series__title">By Series</h1>
                 </div>
                 <div class="series__opciones">
-                    <a href="/tienda/marchlion" class="series__opcion march">
+                    <a href="?serie=marchlion" class="series__opcion march" data-value="marchlion">
                         <h3>March comes in <br> like a lion</h3>
                     </a>
-                    <a href="/tienda/fateextra" class="series__opcion fate">
+                    <a href="?serie=fateextra" class="series__opcion fate" data-value="fateextra">
                         <h3>Fate Extra<br> Last Encore</h3>
                     </a>
-                    <a href="/tienda/monogatari" class="series__opcion mono">
+                    <a href="?serie=monogatari" class="series__opcion mono" data-value="monogatari">
                         <h3>Monogatari</h3>
                     </a>
                 </div>
@@ -74,12 +74,24 @@
             </div>
 
             <h4>sort by</h4>
+            <div class="list_orden">
+
+                <a href="?alfab=1" class="orden_alfabet">Alfabet</a>
+
+                <input type="range" min="10000" max="50000" value="{{precio}}" id="inputPrecio">
+
+                <a href="?color=EC443E" class="list_color"> <div style="background-color: #EC443E;"></div> </a>
+                <a href="?color=302F2F" class="list_color"><div style="background-color: #302F2F;"></div></a>
+                <a href="?color=C5E86A" class="list_color"> <div style="background-color: #C5E86A;"></div></a>
+                <a href="?color=3B81C1" class="list_color"> <div style="background-color: #3B81C1;"></div></a>
+
+            </div>
             <div class="list__productos">
                 {{#each lista}}
                 <div class="producto">
                     <a href="/producto/{{id}}" class="producto__link hvr-bounce-to-right">
                         <div class="producto__imagen">
-                            <img src="{{imagen}}" alt="">
+                            <img src="/img/prod/{{{id}}}/0.jpg" alt="">
                         </div>
                         <p class="producto__nombre">{{nombre}}</p>
                         <p class="producto__precio">${{precio}}</p>

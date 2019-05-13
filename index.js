@@ -5,6 +5,7 @@ const MongoClient = require('mongodb').MongoClient,
 
 var express = require('express');
 var motorRender = require('express-handlebars');
+var assert = require('assert');
 var app = express();
 
 var bodyParser = require('body-parser');
@@ -51,7 +52,9 @@ app.get('/', function (req, res) {
     };
     res.render('home', contexto);
 });
+
 /** 
+ 
 app.get('/tienda', function (req, res) {
     
     var productos = db.collection('productos').find();
@@ -68,66 +71,61 @@ app.get('/tienda', function (req, res) {
     
 });
 */
-app.get('/tienda/:categoria?', function(req,res){
+app.get('/tienda/:categoria?', function(req, res){
  var query={};
+ var options = {};
+
  if(req.params.categoria){
-     query.categoria= req.params.categoria;
+    query.categoria = req.params.categoria;
  }
+
  
+ if(req.query.serie){
+     query.serie = req.query.serie;
+ }
+
+ if(req.query.alfab == 1){
+    options.sort = 'nombre';
+}
+
+if(req.query.precio){
+    query.precio = { $lte : parseInt(req.query.precio)};
+}
+
+if(req.query.color){
+    query.color = req.query.color;
+}
  
  var productos= db.collection('productos');
- productos.find(query).toArray((err,resultList)=>{
+ productos.find(query, options).toArray((err,resultList)=>{
     contexto={
         lista:resultList,
-        categoria: req.params.categoria,
-        
+        precio: req.query.precio
     };
-res.render('tienda', contexto);
+    res.render('tienda', contexto);
  });
 });
-
-
-app.get('/tienda/:serie?', function(req,res){
-    var query={};
-    if(req.params.serie){
-        query.serie= req.params.serie;
-    }
-   
-    
-    var productos= db.collection('productos');
-    productos.find(query).toArray((err,resultList)=>{
-       contexto={
-           lista:resultList,
-           serie: req.params.serie,
-           
-       };
-   res.render('tienda', contexto);
-    });
-   });
-
-
-
 
 app.get('/producto/:id', function(req,res){
 
     var contexto=null;
     var query= {};
+
+
+    var esShirt = false;
+
     if(req.params.id){
         query.id= parseInt(req.params.id);
         
-    }
-
-    if(req.params.categoria){
-        query.categoria= req.params.categoria;
     }
 
     var productos = db.collection('productos').find(query).toArray((err, resultList) => {
        
         contexto ={
 
-            producto :resultList[0],
+        producto :resultList[0],
           
-           esShirt: req.params.categoria=="shirt",
+        esShirt: resultList[0].categoria == 'shirt',
         }
         res.render('producto', contexto);
     });
@@ -136,9 +134,44 @@ app.get('/producto/:id', function(req,res){
 
 app.get('/carro', function(req,res){
 
-    var contexto=null;
+    var mensaje = false;
+
+    if(req.query.sent){
+        mensaje = true;
+    }
+
+    var contexto={
+        mensaje
+    };
 
    res.render('carrito', contexto);
   
+
+});
+
+app.post('/pedido', function(req,res){
+
+    //escribir en db
+    
+    var pedido = {
+        correo: req.body.correo,
+        nombre: req.body.name,
+        fecha: new Date(),
+        dir: req.body.dir,
+        ciudad: req.body.ciudad,
+        pais: req.body.pais,
+        total: req.body.total
+    };
+    
+    var collection = db.collection('pedidos');
+    collection.insertOne(pedido, function(err){
+        assert.equal(err, null);
+    });
+
+    var contexto={
+        mensaje: true
+    };
+
+   res.redirect('/carro?sent=true');
 
 });
