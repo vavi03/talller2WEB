@@ -528,6 +528,25 @@ sans-serif;
 
 
 @media (max-width:500px) {
+
+    .encab{
+    
+            .opciones-encab {
+                
+                height:200px;
+                position: absolute;
+               
+               right:120px;
+               top:70px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: flex-end;
+                align-items: flex-end;
+            }
+
+
+    }
     .categories {
 
 
@@ -618,6 +637,17 @@ sans-serif;
             align-content: center;
             align-items: center;
 
+        }
+
+        &_orden {
+        
+         
+            flex-direction: column;
+
+            .orden__item{
+                margin-bottom: 20px;
+            }
+            
         }
     }
 }
