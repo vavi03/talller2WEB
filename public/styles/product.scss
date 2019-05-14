@@ -42,6 +42,11 @@ sans-serif;
     .logo-pag {
         align-self: center;
         width: 228.99px;
+
+        >img{
+            width:100%;
+            height:100%;
+        }
     }
 
     .opciones-encab {
@@ -60,12 +65,12 @@ sans-serif;
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;
 
         &__num {
 
             font-family: $thirdFont;
-            font-size: 30px;
+            font-size: 20px;
             color: $grayColor;
 
 
@@ -119,11 +124,19 @@ sans-serif;
     }
 
     &__imagenes {
-        width: 250px;
+        width: 400px;
         height: 400px;
         margin-right: 50px;
 
-        
+        .swiper-pagination-bullet {
+            background: $mainColor;
+            opacity: 0.5;
+        }
+
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+            background: $mainColor;
+        }
     }
 
     &__wrapper{
@@ -192,10 +205,34 @@ sans-serif;
         font-size: 30px;
 
     }
-    &___tallas{
+    &__tallas{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
+        width:50%;
+        margin-bottom: 20px;
+    .talla{
+        width:30px;
+        height:20px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        font-family: $thirdFont;
+        text-decoration: none;
+        color:$blackColor;
+
+        &:hover{
+            background: $greenColor;
+            cursor: pointer;
+        }
+        
+        &:active{
+            background-color: $greenColor;
+        }
+       
+    }
+        
     }
 
     &__cant {
@@ -298,15 +335,20 @@ sans-serif;
         display: flex;
         width: 80%;
         flex-direction: row;
-        justify-content: space-around;
-
+        justify-content: space-evenly;
+        letter-spacing: 0.08em;
         margin-top: 50px;
 
         >h4 {
-            font-family: $thirdFont;
+            font-family: $mainFont;
             font-size: 20px;
-            margin-right: 50px;
+            
+            margin-right: 40px;
             font-weight: 600;
+        }
+
+        .title_price{
+            margin-right: 15px;
         }
     }
 
@@ -327,41 +369,76 @@ sans-serif;
             justify-content: space-around;
             align-content: center;
             align-items: center;
+            width:92%;
+            margin-bottom: 20px;
 
-            >h3{
-
+            .item-nombre{
+                width:300px;
+                display: flex;
+                flex-direction: row;
+                >img{
+                    width:50px;
+                    height:100%;
+                    margin-right: 10px;
+                }
             }
 
-            &-img{
-
+            .item-cant{
+                margin-left:-120px;
+            }
+           
+            .item-precio{
+               margin-right:-155px;
             }
 
             &-borrar{
-                width: 20px;
-                height: 20px;
+                width: 26px;
+                height: 30px;
+                margin-right: -50px;
+                >img{
+                    width:100%;
+                    height: 100%;
+                }
+            }
 
-                background-color: red;
+           
+            
+        }
+
+    }
+    .total-space{
+        display: flex;
+        flex-direction: row;
+        width:80%;
+        justify-content: flex-end;
+        align-content: flex-end;
+        align-items: flex-end;
+        margin-bottom: 50px;
+
+        .total-container{
+            background: $mainColor;
+            width:50%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-content: center;
+            align-items: center;
+
+            .total__title{
+                font-family: $mainFont;
+                color:$whiteColor;
+                letter-spacing: 0.08em;
+
+            }
+            #total{
+                font-family: $thirdFont;
+                color: $whiteColor;
+                margin-right: 70px;
             }
         }
 
     }
-    &__btn {
-        font-family: $secondFont;
-        color: $blackColor;
-        font-size: 14px;
-        letter-spacing: 0.05em;
-        margin-top:20px;
-        text-decoration: none;
-        background-color: $greenColor;
 
-        padding: 6px 10px;
-
-        transition: .1s all ease-in-out;
-
-        &:hover {
-            background-color: lighten($greenColor, 20%)
-        }
-    }
 }
 
 .checkout {

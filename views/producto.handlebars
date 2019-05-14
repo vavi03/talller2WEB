@@ -16,7 +16,10 @@
 
     <div class="app">
         <header class="encab">
-            <img src="../img/tienda/logo.png" alt="" class="logo-pag">
+             <a href="/tienda" class="logo-pag">
+            <img src="../img/tienda/logo.png" alt="" >
+            </a>
+           
             <div class="opciones-encab">
                 <div class="car">
                     <p class="car__num"></p>
@@ -32,16 +35,13 @@
         <section class="producto">
             <div class="producto__content">
 
-                <img id="productoImagen" style="display: none;" src="{{producto.imagen}}" alt="">
+                <img id="productoImagen" style="display: none;" src='/img/prod/{{{producto.id}}}/1.jpg' alt="">
 
                 <div class="producto__imagenes swiperSerie swiper-container">
 
                     <div class="producto__wrapper swiper-wrapper">
-
-
-
-                        <img src='/img/prod/{{{producto.id}}}/0.jpg' alt="" class="producto__imagen swiper-slide">
-                        <img src='/img/prod/{{producto.id}}/1.jpg' alt="" class="producto__imagen swiper-slide">
+                        <img src='/img/prod/{{{producto.id}}}/1.jpg' alt="" class="producto__imagen swiper-slide">
+                        <img src='/img/prod/{{producto.id}}/2.jpg' alt="" class="producto__imagen swiper-slide">
 
                     </div>
                     <!-- Add Pagination -->
@@ -61,9 +61,10 @@
 
                     <div class="producto__tallas">
 
-                        <input type="radio" name="" value="s">S<br>
-                        <input type="radio" name="" value="m">M<br>
-                        <input type="radio" name="" value="l">L
+                        <a   class="talla">S</a>
+                        <a  class="talla">M</a>
+                         <a  class="talla">L</a>
+                        
 
                     </div>
 

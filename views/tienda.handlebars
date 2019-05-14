@@ -15,7 +15,9 @@
 
     <div class="app">
         <header class="encab">
-            <img src="../img/tienda/logo.png" alt="" class="logo-pag">
+            <a href="/tienda" class="logo-pag">
+            <img src="../img/tienda/logo.png" alt="" >
+            </a>
             <div class="opciones-encab">
                 <div class="car">
                     <p class="car__num"></p>
@@ -72,18 +74,44 @@
             <div class="list__contTitle">
                 <h1 class="list__title">Product List</h1>
             </div>
-
+            <a class="allproducts" href="/tienda">All Products</a>
             <h4>sort by</h4>
+
             <div class="list_orden">
+                <div class="orden__item">
+                    <p>Alphabet</p>
+                    <a href="?alfab=1" class="orden_alfabet">A-Z</a>
+                </div>
 
-                <a href="?alfab=1" class="orden_alfabet">Alfabet</a>
+                <div class="orden__item item-maslargo">
+                    <p>Price</p>
+                    <div class="precio-label">
+                        <p>$10000</p>
+                        <p>$25000</p>
+                        <p>$50000</p>
+                    </div>
+                    <input type="range" min="10000" max="50000" value="{{precio}}" id="inputPrecio" class="inputPrecio">
+                </div>
 
-                <input type="range" min="10000" max="50000" value="{{precio}}" id="inputPrecio">
+                <div class="orden__item">
+                    <p>Color</p>
+                    <div class="colores">
+                        <a href="?color=EC443E" class="color">
+                            <div style="background-color: #EC443E;"></div>
+                        </a>
+                        <a href="?color=302F2F" class="color">
+                            <div style="background-color: #302F2F;"></div>
+                        </a>
+                        <a href="?color=C5E86A" class="color">
+                            <div style="background-color: #C5E86A;"></div>
+                        </a>
+                        <a href="?color=3B81C1" class="color">
+                            <div style="background-color: #3B81C1;"></div>
+                        </a>
 
-                <a href="?color=EC443E" class="list_color"> <div style="background-color: #EC443E;"></div> </a>
-                <a href="?color=302F2F" class="list_color"><div style="background-color: #302F2F;"></div></a>
-                <a href="?color=C5E86A" class="list_color"> <div style="background-color: #C5E86A;"></div></a>
-                <a href="?color=3B81C1" class="list_color"> <div style="background-color: #3B81C1;"></div></a>
+                    </div>
+                </div>
+
 
             </div>
             <div class="list__productos">
@@ -91,7 +119,7 @@
                 <div class="producto">
                     <a href="/producto/{{id}}" class="producto__link hvr-bounce-to-right">
                         <div class="producto__imagen">
-                            <img src="/img/prod/{{{id}}}/0.jpg" alt="">
+                            <img src="/img/prod/{{{id}}}/1.jpg" alt="">
                         </div>
                         <p class="producto__nombre">{{nombre}}</p>
                         <p class="producto__precio">${{precio}}</p>

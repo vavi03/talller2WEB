@@ -15,7 +15,9 @@
     <div class="app">
 
         <header class="encab">
-            <img src="../img/tienda/logo.png" alt="" class="logo-pag">
+            <a href="/tienda" class="logo-pag">
+                <img src="../img/tienda/logo.png" alt="">
+            </a>
             <div class="opciones-encab">
                 <div class="car">
                     <p class="car__num"></p>
@@ -43,29 +45,36 @@
             <div class="cartinfo__titles">
                 <h4>Products</h4>
                 <h4>Quantity</h4>
-                <h4>Price</h4>
+                <h4 class="title_price">Price</h4>
             </div>
             <div class="car-list">
 
 
             </div>
+            <div class="total-space">
+                <div class="total-container">
+                    <h2 class="total__title">TOTAL:</h2>
+                    <h4 id="total">0</h4>
 
-            <h4 id="total" >0</h4>
+                </div>
 
-            <a href="/checkout" class="cartinfo__btn">Checkout</a>
+            </div>
+
+
         </section>
-        
+
         <section class="checkout">
             <div class="checkout__content">
 
 
                 <div class="checkout__form">
 
-               
 
-                    <form action="/pedido" method="POST"  class="checkout__container">
 
-                        <input id="inputTotal" style="display: none;" value="0" class="espacio-email checkout__space" name="total" type="number">
+                    <form action="/pedido" method="POST" class="checkout__container">
+
+                        <input id="inputTotal" style="display: none;" value="0" class="espacio-email checkout__space"
+                            name="total" type="number">
 
                         <div class="checkout__contTitle">
                             <h1 class="checkout__titulo">Checkout</h1>

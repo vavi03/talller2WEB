@@ -31,8 +31,8 @@ sans-serif;
 }
 
 .encab {
-  
-   position: relative;
+
+    position: relative;
     display: flex;
     flex-direction: column;
     flex-basis: 160px;
@@ -42,6 +42,11 @@ sans-serif;
     .logo-pag {
         align-self: center;
         width: 228.99px;
+
+        >img{
+            width:100%;
+            height:100%;
+        }
     }
 
     .opciones-encab {
@@ -53,44 +58,46 @@ sans-serif;
         align-content: center;
         align-items: flex-end;
     }
-    .car{
-        width:100%;
-        margin-bottom:10px;
+
+    .car {
+        width: 100%;
+        margin-bottom: 10px;
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;
 
-        &__num{
-           
+        &__num {
+
             font-family: $thirdFont;
-            font-size: 30px;
+            font-size: 20px;
             color: $grayColor;
-            
-            
+
+
         }
 
-        &__link{
-        >img{
-          width:100%;
+        &__link {
+            >img {
+                width: 100%;
+            }
         }
+
     }
-        
-    }
-    .search{
-        width:80%;
-        margin-bottom:10px;
+
+    .search {
+        width: 80%;
+        margin-bottom: 10px;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: flex-end;
-       
 
-        &__link{
-        >img{
-          width:100%;
+
+        &__link {
+            >img {
+                width: 100%;
+            }
         }
-    }
     }
 }
 
@@ -269,23 +276,7 @@ sans-serif;
 
 .list {
 
-    &_orden{
 
-        width: 300px;
-        height: 50px;
-
-        
-    }
-
-    &_color{
-
-        >div{
-            
-        width: 20px;
-        height: 20px;
-        flex-shrink: 0;
-        }
-    }
 
     display: flex;
     flex-direction: column;
@@ -326,76 +317,172 @@ sans-serif;
         letter-spacing: 0.08em;
         color: $blackColor;
     }
+    
+    .allproducts{
+       margin-top:10px;
+        font-family: $thirdFont;
+        font-size: 18px;
+        color: $blackColor;
 
-    >h4{
+        &:hover{
+            color:$mainColor;
+        }
+    }
+
+    >h4 {
         font-family: $thirdFont;
         font-size: 14px;
-        margin-top:20px;
+        margin-top: 20px;
         font-weight: 400;
     }
+
+
+    &_orden {
+        margin-top: 20px;
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-content: center;
+        align-items: center;
+
+        .orden__item{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-content: center;
+            align-items: center;
+            width:200px;
+            height:70px;
+
+            >p{
+                font-family: $mainFont;
+                font-size: 20px;
+            }
+
+            .orden_alfabet{
+                text-decoration: none;
+                font-family: $thirdFont;
+                color:$blackColor;
+
+                &:hover{
+                    color:$mainColor;
+                }
+            }
+
+            .item-maslargo{
+                width:400px;
+            }
+            .precio-label{
+                display: flex;
+                flex-direction: row;
+                font-family: $thirdFont;
+                font-size: 10px;
+                width:100%;
+                justify-content: space-between;
+                
+            }
+            .inputPrecio{
+                margin-top:5px;
+                width:80%;
+                
+                outline:none;
+                opacity: 0.7;
+                transition:opacity .2s;
+                &:hover{
+                    opacity: 1;
+                }
+              
+            
+            }
+
+            .colores{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .color {
+
+                >div {
+        
+                    width: 30px;
+                    height: 30px;
+                    flex-shrink: 0;
+                }
+            }
+        }
+
+    }
+
+    
+
     &__productos {
-        margin-top:110px;
+        margin-top: 110px;
         width: 100%;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-evenly;
-       
+
     }
 
     .producto {
-        
+
         flex-shrink: 0;
         width: 240px;
         height: auto;
         margin-bottom: 80px;
         display: flex;
         flex-direction: column;
-        justify-content:flex-start;
+        justify-content: flex-start;
         align-content: center;
         align-items: center;
 
-        &__link{
-            width:100%;
-            height:100%;
+        &__link {
+            width: 100%;
+            height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content:flex-start;
+            justify-content: flex-start;
             align-content: center;
             align-items: center;
             text-decoration: none;
             color: $blackColor;
-            padding: 15px ;
+            padding: 15px;
+
             &:before {
                 background: $greenColor;
             }
         }
 
-        &__imagen{
-            width:80%;
-            height:auto;
-            
-            margin-bottom:20px;
-           >img{
-             width:100%;
-             height:230px;
+        &__imagen {
+            width: 80%;
+            height: auto;
+
+            margin-bottom: 20px;
+
+            >img {
+                width: 100%;
+                height: 230px;
             }
         }
 
-        &__nombre{
+        &__nombre {
             font-family: $thirdFont;
             font-size: 14px;
-           font-weight: 300;
-           text-align: center;
-        height:50px;
+            font-weight: 300;
+            text-align: center;
+            height: 50px;
 
         }
 
-        &__precio{
+        &__precio {
             font-family: $thirdFont;
             font-size: 16px;
-           padding-top:20px;
-           font-weight: 800;
+            padding-top: 20px;
+            font-weight: 800;
 
         }
     }
@@ -410,6 +497,7 @@ sans-serif;
     align-items: center;
     height: 250px;
     background: $whiteColor;
+
     &__content {
         display: flex;
         width: $margen;
@@ -441,7 +529,7 @@ sans-serif;
 
 @media (max-width:500px) {
     .categories {
-      
+
 
         &__opciones {
             display: flex;
@@ -452,11 +540,11 @@ sans-serif;
             width: 100%;
             margin-top: 20px;
         }
-    
+
         &__opcion {
-    
+
             position: relative;
-    
+
             background: $mainColor;
             width: 100%;
             height: 80px;
@@ -467,12 +555,12 @@ sans-serif;
             cursor: pointer;
             margin-right: 0;
         }
-      
-    
-        
+
+
+
     }
 
-    .series{
+    .series {
         &__opciones {
             display: flex;
             flex-direction: column;
@@ -482,7 +570,7 @@ sans-serif;
             width: 100%;
             margin-top: 20px;
         }
-    
+
         &__opcion {
             position: relative;
             background: $mainColor;
@@ -494,6 +582,7 @@ sans-serif;
             color: $blackColor;
             cursor: pointer;
             margin-right: 0;
+
             >h3 {
                 position: absolute;
                 bottom: 15px;
@@ -507,28 +596,28 @@ sans-serif;
 
 
         &__productos {
-            margin-top:110px;
+            margin-top: 110px;
             width: 100%;
             display: flex;
             flex-direction: column;
-            
+
             justify-content: center;
             align-content: center;
-           
+
         }
 
         .producto {
-        
+
             flex-shrink: 0;
             width: 240px;
             height: auto;
             margin-bottom: 80px;
             display: flex;
             flex-direction: column;
-            justify-content:center;
+            justify-content: center;
             align-content: center;
             align-items: center;
-    
+
         }
     }
 }

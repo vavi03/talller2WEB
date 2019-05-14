@@ -2,11 +2,36 @@ function paginaCargada() {
 
     var inputPrecio = document.querySelector('#inputPrecio');
 
-    inputPrecio.addEventListener('change', filtrarPrecio);
+    if (inputPrecio != null) {
+        inputPrecio.addEventListener('change', filtrarPrecio);
+    }
+
+    var allProducts = document.querySelector('.allproducts');
+
+    if (allProducts != null) {
+        allProducts.addEventListener('click', function () {
+            location.href = '/tienda';
+        });
+    }
+
+    var tallas = document.querySelectorAll('.talla');
+
+    function recorrerTallas(talla) {
+       
+
+        function ponerVerde() {
+            talla.style.background = '#BFEC4A';
+        }
+        talla.addEventListener('click', ponerVerde);
+    }
+    tallas.forEach(recorrerTallas);
+
+
+
 
     function filtrarPrecio() {
-        
-        location.href = '/tienda?precio='+inputPrecio.value+'';
+
+        location.href = '/tienda?precio=' + inputPrecio.value + '';
     }
 
     var listaProductos = [];
@@ -30,10 +55,10 @@ function paginaCargada() {
 
                 total += (producto.precio * producto.cantidad);
 
-                listaCarrito.innerHTML += '<div class="item-lista"><img class="item-lista-img" src="' + producto.imagen + '" width="70"> <h3>' + producto.nombre + '</h3> <h4> '+ producto.cantidad +' </h4> <h4> $'+ (producto.precio * producto.cantidad) +' </h4> <div class="item-lista-borrar"></div> </div';
+                listaCarrito.innerHTML += '<div class="item-lista"><div class="item-nombre"><img class="item-lista-img" src="' + producto.imagen + '" width="70"> <h3>' + producto.nombre + '</h3></div> <h4 class="item-cant"> ' + producto.cantidad + ' </h4> <h4 class="item-precio"> $' + (producto.precio * producto.cantidad) + ' </h4> <div class="item-lista-borrar"><img src="../img/tienda/borrar.png"></div> </div';
             });
 
-            var tituloTotal = document.querySelector('#total').innerHTML = total;
+            var tituloTotal = document.querySelector('#total').innerHTML = "$"+total;
             var inputTotal = document.querySelector('#inputTotal').value = total;
 
         }
@@ -90,20 +115,5 @@ function paginaCargada() {
     }
 
 
-    /** 
-    var alfabet= document.querySelector('.orden_alfabet');
-    
-   
-    var listaNombre=[];
-    function ordenAlfabetico(){
-        var nombres= document.querySelectorAll('.producto__nombre');
-        nombres.forEach(function(nombre){
-            listaNombre.push(nombre);
-        });
-        listaNombre.sort();
-
-    }
-    alfabet.addEventListener('click', ordenAlfabetico);
-*/
 }
 window.addEventListener('load', paginaCargada);
