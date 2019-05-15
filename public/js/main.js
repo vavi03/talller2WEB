@@ -130,25 +130,6 @@ function onClickListeners(index){
   }
   arraySeries.forEach(recorrerSeries);
 
-  /*
-  //var arraySeries = document.getElementsByClassName('top-works__serie');
-  createListenerSeries();
-
-  function createListenerSeries(){
-
-    for (let index = 0; index < arraySeries.length; index++) {
-      var element = arraySeries[index];
-     
-      element.addEventListener("click", function(){ createContentSerie(index) });
-    }
-  }
-
-  function createContentSerie(index){
-    var content = document.getElementById("animeContent");
-    console.log("ejecuté evento");
-    content.innerHTML = contentSeries[index].name;
-  }
-  */
 }
 
 window.addEventListener('load', paginaCargada);

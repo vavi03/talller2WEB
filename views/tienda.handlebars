@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SHAFT SHOP</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Nunito:300,400|Teko" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/libs/hover.css">
+    <link rel="stylesheet" href="../styles/tienda.css">
+</head>
+
+<body>
+
+    <div class="app">
+        <header class="encab">
+            <a href="/tienda" class="logo-pag">
+            <img src="../img/tienda/logo.png" alt="" >
+            </a>
+            <div class="opciones-encab">
+                <div class="car">
+                    <p class="car__num"></p>
+                    <a href="/carro" class="car__link"><img src="../img/tienda/car.png" alt=""></a>
+                </div>
+                <div class="search">
+                    <a href="" class="search__link"><img src="../img/tienda/buscar.png" alt=""></a>
+                </div>
+            </div>
+
+        </header>
+
+
+        <section class="categories">
+            <div class="categories__content">
+                <div class="categories__contTitle">
+                    <h1 class="categories__title">Categories</h1>
+                </div>
+                <div class="categories__opciones">
+                    <a href="/tienda/shirt" class="shirts categories__opcion">
+                        <h3>Shirts</h3>
+                    </a>
+                    <a href="/tienda/bag" class="blurays categories__opcion">
+                        <h3>Bags</h3>
+                    </a>
+                    <a href="/tienda/booksposter" class=" categories__opcion books">
+                        <h3>Books & Posters</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="series">
+            <div class="series__content">
+                <div class="series__contTitle">
+                    <h1 class="series__title">By Series</h1>
+                </div>
+                <div class="series__opciones">
+                    <a href="?serie=marchlion" class="series__opcion march" data-value="marchlion">
+                        <h3>March comes in <br> like a lion</h3>
+                    </a>
+                    <a href="?serie=fateextra" class="series__opcion fate" data-value="fateextra">
+                        <h3>Fate Extra<br> Last Encore</h3>
+                    </a>
+                    <a href="?serie=monogatari" class="series__opcion mono" data-value="monogatari">
+                        <h3>Monogatari</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="list">
+
+            <div class="list__contTitle">
+                <h1 class="list__title">Product List</h1>
+            </div>
+            <a class="allproducts" href="/tienda">All Products</a>
+            <h4>sort by</h4>
+
+            <div class="list_orden">
+                <div class="orden__item">
+                    <p>Alphabet</p>
+                    <a href="?alfab=1" class="orden_alfabet">A-Z</a>
+                </div>
+
+                <div class="orden__item item-maslargo">
+                    <p>Price</p>
+                    <div class="precio-label">
+                        <p>$10000</p>
+                        <p>$25000</p>
+                        <p>$50000</p>
+                    </div>
+                    <input type="range" min="10000" max="50000" value="{{precio}}" id="inputPrecio" class="inputPrecio">
+                </div>
+
+                <div class="orden__item">
+                    <p>Color</p>
+                    <div class="colores">
+                        <a href="?color=EC443E" class="color">
+                            <div style="background-color: #EC443E;"></div>
+                        </a>
+                        <a href="?color=302F2F" class="color">
+                            <div style="background-color: #302F2F;"></div>
+                        </a>
+                        <a href="?color=C5E86A" class="color">
+                            <div style="background-color: #C5E86A;"></div>
+                        </a>
+                        <a href="?color=3B81C1" class="color">
+                            <div style="background-color: #3B81C1;"></div>
+                        </a>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="list__productos">
+                {{#each lista}}
+                <div class="producto">
+                    <a href="/producto/{{id}}" class="producto__link hvr-bounce-to-right">
+                        <div class="producto__imagen">
+                            <img src="/img/prod/{{{id}}}/1.jpg" alt="">
+                        </div>
+                        <p class="producto__nombre">{{nombre}}</p>
+                        <p class="producto__precio">${{precio}}</p>
+                    </a>
+                </div>
+
+                {{/each}}
+            </div>
+
+        </section>
+
+
+
+        <footer class="footer">
+
+            <div class="footer__content">
+                <img class="footer__redes" src="../img/redes.png" alt="">
+                <div class="footer__links">
+                    <h4 class="footer__link">About us</h4>
+                    <h4 class="footer__link">Top Works</h4>
+                    <h4 class="footer__link">Contact us</h4>
+                    <h4 class="footer__link">Shop</h4>
+                </div>
+            </div>
+
+
+        </footer>
+    </div>
+    <script src="/js/tienda.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{nombre}}</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Nunito:300,400,500,600|Teko" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/libs/hover.css">
+    <link rel="stylesheet" href="../styles/libs/swiper.css">
+    <link rel="stylesheet" href="../styles/product.css">
+</head>
+
+<body>
+
+    <div class="app">
+        <header class="encab">
+             <a href="/tienda" class="logo-pag">
+            <img src="../img/tienda/logo.png" alt="" >
+            </a>
+           
+            <div class="opciones-encab">
+                <div class="car">
+                    <p class="car__num"></p>
+                    <a href="/carro" class="car__link"><img src="../img/tienda/car.png" alt=""></a>
+                </div>
+                <div class="search">
+                    <a href="" class="search__link"><img src="../img/tienda/buscar.png" alt=""></a>
+                </div>
+            </div>
+
+        </header>
+
+        <section class="producto">
+            <div class="producto__content">
+
+                <img id="productoImagen" style="display: none;" src='/img/prod/{{{producto.id}}}/1.jpg' alt="">
+
+                <div class="producto__imagenes swiperSerie swiper-container">
+
+                    <div class="producto__wrapper swiper-wrapper">
+                        <img src='/img/prod/{{{producto.id}}}/1.jpg' alt="" class="producto__imagen swiper-slide">
+                        <img src='/img/prod/{{producto.id}}/2.jpg' alt="" class="producto__imagen swiper-slide">
+
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+
+
+                <div class="producto__txt">
+                    <div class="producto__contTitle">
+                        <h2 class="producto__title">{{producto.nombre}}</h2>
+                    </div>
+                    <p class="producto__descrip">{{producto.descripcion}}</p>
+                    <p class="producto__precio">$ <span id="precio">{{producto.precio}}</span></p>
+
+
+                    {{#if esShirt}}
+
+                    <div class="producto__tallas">
+
+                        <a   class="talla">S</a>
+                        <a  class="talla">M</a>
+                         <a  class="talla">L</a>
+                        
+
+                    </div>
+
+                    {{/if}}
+
+                    <div class="producto__cant">
+                        <p class="cant">Quantity</p>
+                        <select id="cantidad" name="cantidad">
+                            <option class="cant__num" value="1">1</option>
+                            <option class="cant__num" value="2">2</option>
+                            <option class="cant__num" value="3">3</option>
+                            <option class="cant__num" value="4">4</option>
+                            <option class="cant__num" value="5">5</option>
+                            <option class="cant__num" value="6">6</option>
+                            <option class="cant__num" value="7">7</option>
+                            <option class="cant__num" value="8">8</option>
+
+                        </select>
+                    </div>
+                    <a href="" class="producto__btn">Add to cart</a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+
+            <div class="footer__content">
+                <img class="footer__redes" src="../img/redes.png" alt="">
+                <div class="footer__links">
+                    <h4 class="footer__link">About us</h4>
+                    <h4 class="footer__link">Top Works</h4>
+                    <h4 class="footer__link">Contact us</h4>
+                    <h4 class="footer__link">Shop</h4>
+                </div>
+            </div>
+
+
+        </footer>
+
+    </div>
+
+    <script src="/js/libs/swiper.js"></script>
+    <script src="/js/tienda.js"></script>
+
+    <script>
+
+        var swiper = new Swiper('.swiperSerie', {
+            effect: 'cube',
+            grabCursor: true,
+            cubeEffect: {
+                shadow: false,
+                slideShadows: false,
+                shadowOffset: 20,
+                shadowScale: 0.94,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                dynamicBullets: true,
+            },
+        });
+
+    </script>
+
+</body>
+
+</html>
