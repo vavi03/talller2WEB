@@ -41,6 +41,8 @@ function paginaCargada() {
     var carritoNum = document.querySelector('.car__num');
     var listaCarrito = document.querySelector('.car-list');
 
+    
+
     if (localStorage.getItem('listaProductos') != null) {
         listaProductos = JSON.parse(localStorage.getItem('listaProductos'));
     }

@@ -53,24 +53,6 @@ app.get('/', function (req, res) {
     res.render('home', contexto);
 });
 
-/** 
- 
-app.get('/tienda', function (req, res) {
-    
-    var productos = db.collection('productos').find();
-
-    productos.toArray((err, result) => {
-        var contexto = {
-
-            lista: result,
-           
-        };
-        res.render('tienda', contexto);
-    });
-
-    
-});
-*/
 app.get('/tienda/:categoria?', function(req, res){
  var query={};
  var options = {};
