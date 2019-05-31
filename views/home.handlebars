@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles/libs/swiper.css">
     <link rel="stylesheet" href="./styles/libs/hover.css">
     <link rel="stylesheet" href="./styles/main.css">
+  
 </head>
 
 <body>
@@ -27,6 +28,7 @@
                 <a class="encab__link hvr-underline-from-center" href="#">Top Works</a>
                 <a class="encab__link hvr-underline-from-center" href="#">Contact</a>
                 <a class="encab__link hvr-underline-from-center" href="#">Events</a>
+                <a class="encab__link hvr-underline-from-center" href="#">Interaction</a>
                 <a class="encab__link hvr-underline-from-center" href="/tienda">Shop</a>
 
             </nav>
@@ -137,7 +139,9 @@
                             </div>
 
                         </div>
+                        <!-- Canvas de la libreria para hacer el raster de la imagen a cuadritos -->
                         <img src="./img/event1.png" alt="" class="events__img">
+
                     </div>
 
                     <div class="events__evento swiper-slide">
@@ -381,7 +385,15 @@
             </div>
 
         </section>
-
+        <!-- interaccion foto monogatari-->
+         <section class="interaccion">
+            <div class="events__title">
+                <h1 class="events__titulo">Interaction</h1>
+            </div>
+            <canvas id="myCanvas2" width="800" height="500" ></canvas>
+            <p>Move the cursor on the image and see what it does!</p>
+        <!--fin interaccion-->
+        </section>
 
         <section class="contact-us">
 
@@ -428,7 +440,11 @@
         </footer>
 
     </div>
+  <!-- Aqui estan las librerias de paper.js -->
+     <script  type="text/javascript"  src="/paper/paper-full.js"></script>
+    <script type="text/paperscript" src="/js/myScript2.js" canvas="myCanvas2"></script>
 
+    <!-- hasta aqui van las librerias -->
 
     <!--data js-->
     <script src="/js/libs/swiper.js"></script>

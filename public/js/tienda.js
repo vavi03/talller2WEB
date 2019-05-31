@@ -14,6 +14,7 @@ function paginaCargada() {
         });
     }
 
+   
     var tallas = document.querySelectorAll('.talla');
 
     function recorrerTallas(talla) {
@@ -26,6 +27,18 @@ function paginaCargada() {
     }
     tallas.forEach(recorrerTallas);
 
+//inicio de la animacion de voltear producto
+    var producto = document.querySelectorAll('.producto');
+    
+    function recorrerProducto(producto){
+
+        function pasarPor(){
+            TweenMax.to(producto, 2, {rotationY:360});
+        }
+        producto.addEventListener('mouseover',pasarPor);
+    }
+    producto.forEach(recorrerProducto);
+//fin de la animacion
 
 
 
