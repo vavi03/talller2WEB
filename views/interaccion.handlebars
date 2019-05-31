@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shaft Animation Studio</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Nunito:300,400|Teko" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/libs/swiper.css">
+    <link rel="stylesheet" href="./styles/libs/hover.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <!-- Aqui estan las librerias de paper.js -->
+     <script  type="text/javascript"  src="/paper/paper-full.js"></script>
+    <script type="text/paperscript" src="/js/myScript2.js" canvas="myCanvas2"></script>
+
+    <!-- hasta aqui van las librerias -->
+</head>
+
+<body>
+
+    <div class="app">
+
+        <header class="encab">
+            <div class="encab__logo">
+                <div id="parallax" class="encab__logo-contParallax">
+                    <img data-depth="0.3" src="./img/psj_encab.png" alt="" class="encab__img1"></div>
+                <img src="./img/logo.png" alt="" class="encab__img2">
+            </div>
+            <nav class="encab__nav">
+                <a class="encab__link hvr-underline-from-center" href="#">About us</a>
+                <a class="encab__link hvr-underline-from-center" href="#">Top Works</a>
+                <a class="encab__link hvr-underline-from-center" href="#">Contact</a>
+                <a class="encab__link hvr-underline-from-center" href="#">Events</a>
+                <a class="encab__link hvr-underline-from-center" href="/interaccion">Interaction</a>
+                <a class="encab__link hvr-underline-from-center" href="/tienda">Shop</a>
+
+            </nav>
+
+        </header>
+
+        <section class="landing">
+            <div class="landing__content">
+                <div class="landing__txt">
+                    <h3 class="landing__titulo">New products <br> from your <br> favorites series!</h3>
+
+                    <div class="landing__shop">
+                    <img class="landing__icon" src="./img/icon.svg" alt="">
+                    <h4 class="landing__name">OFFICIAL SHOP</h4>
+                </div>
+                    <a class="landing__btn" href="/tienda">Go Now!</a>
+                </div>
+                <div class="landing__img">
+                    <img class="landing__img__1" src="./img/img1.png" alt="">
+                    <div class="landing__img__2">
+                        <img class="landing__img__2__1" src="./img/img2.png" alt="">
+                        <img class="landing__img__2__2" src="./img/img3.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="about-us">
+
+            <div class="about-us__content">
+                <div class="about-us__contTitle">
+                    <h1 class="about-us__titulo">About us</h1>
+                </div>
+                <!-- Swiper -->
+                <div class="about-us__swiperContainer swiper-container swiperAboutUs">
+                    <div class="about-us__wrapper swiper-wrapper">
+                        <div class="about-us__slide swiper-slide">
+
+                            <div class="about-us__content1 ">
+
+                                <div class="about-us__content1__cont">
+                                    <h2 class="about-us__content1__cont__titulo">Birth</h2>
+                                </div>
+                                <p class="about-us__content1__txt ">
+                                    Nearly 40 years since its founding in 1975, Shaft Co., Ltd.
+                                    He has been mainly dedicated to the creation of creative works and personnel as an
+                                    animation studio.</p>
+
+                            </div>
+                        </div>
+                        <div class="about-us__slide swiper-slide">
+                            <div class="about-us__content2">
+
+                                <div class="about-us__content2__cont">
+                                    <h2 class="about-us__content2__cont__titulo">Goal</h2>
+                                </div>
+                                <p class="about-us__content2__txt ">
+                                    As a company that continues to challenge creative work in the future, We would like
+                                    to move forward so that we can offer jobs that can be enjoyed by animation fans.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="about-us__slide swiper-slide">
+                            <div class="about-us__content3 ">
+                                <div class="about-us__content3__cont">
+                                    <h2 class="about-us__content3__cont__titulo">Value</h2>
+                                </div>
+                                <p class="about-us__content3__txt ">
+
+                                    As animation is accepted as a proud culture of Japan,
+                                    we are rapidly changing from analog production of paper and film to digital
+                                    production, mainly for PC.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination swiperAboutUs-pagination"></div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section class="events">
+            <div class="events__title">
+                <h1 class="events__titulo">Interaction</h1>
+            </div>
+            <canvas id="myCanvas2" width="1600" height="1000" class="events__img"></canvas>
+
+        
+        </section>
+
+        <section class="contact-us">
+
+            <div class="contact-us__container">
+                <div class="contact-us__title">
+                    <h1 class="contact-us__titulo">Contact Us</h1>
+                </div>
+
+                <div class="contact-us__write">
+                    <img class="contact-us__img" src="./img/contact.png" alt="">
+
+                    <div class="contact-us__form">
+                        <div class="contact-us__content">
+                            <div class="contact-us__write-email">
+                                <p class="contact-us__email">Email</p>
+                                <input class="contact-us__espacio-email" type="email" name="" id="">
+
+                            </div>
+                            <div class="contact-us__message">
+                                <p class="contact-us__msg">Message</p>
+                                <input class="contact-us__espacio-msg" type="text">
+                            </div>
+                            <a href="#" class="contact-us__btn">Send</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <footer class="footer">
+
+            <div class="footer__content">
+                <img class="footer__redes" src="./img/redes.png" alt="">
+                <div class="footer__links">
+                    <h4 class="footer__link">About us</h4>
+                    <h4 class="footer__link">Top Works</h4>
+                    <h4 class="footer__link">Contact us</h4>
+                    <h4 class="footer__link">Shop</h4>
+                </div>
+            </div>
+
+
+        </footer>
+
+    </div>
+
+
+    <!--data js-->
+    <script src="/js/libs/swiper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+
+    <!--P5.js, processing-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+
+
+    <!--my code-->
+    <script src="/js/main.js"></script>
+    <script src="/js/song.js"></script>
+
+</body>
+
+</html>

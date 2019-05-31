@@ -48,9 +48,10 @@ app.set('view engine', 'handlebars');
 app.get('/', function (req, res) {
     var contexto = {
 
-
+        layout:false
     };
-    res.render('home', contexto);
+   res.render('home', contexto);
+  //  res.send('home', contexto);
 });
 
 app.get('/tienda/:categoria?', function(req, res){
@@ -82,7 +83,8 @@ if(req.query.color){
  productos.find(query, options).toArray((err,resultList)=>{
     contexto={
         lista:resultList,
-        precio: req.query.precio
+        precio: req.query.precio,
+        layout:false
     };
     res.render('tienda', contexto);
  });
@@ -104,7 +106,7 @@ app.get('/producto/:id', function(req,res){
     var productos = db.collection('productos').find(query).toArray((err, resultList) => {
        
         contexto ={
-
+            layout:false,
         producto :resultList[0],
           
         esShirt: resultList[0].categoria == 'shirt',
@@ -123,7 +125,8 @@ app.get('/carro', function(req,res){
     }
 
     var contexto={
-        mensaje
+        mensaje,
+        layout:false
     };
 
    res.render('carrito', contexto);
@@ -143,6 +146,8 @@ app.post('/pedido', function(req,res){
         ciudad: req.body.ciudad,
         pais: req.body.pais,
         total: req.body.total
+
+        
     };
     
     var collection = db.collection('pedidos');
@@ -151,7 +156,8 @@ app.post('/pedido', function(req,res){
     });
 
     var contexto={
-        mensaje: true
+        mensaje: true,
+        layout:false
     };
 
    res.redirect('/carro?sent=true');
