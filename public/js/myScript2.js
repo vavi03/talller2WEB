@@ -1,4 +1,4 @@
-var raster = new Raster('/img/monogatari.png');
+var raster = new Raster('/img/monogatari.jpg');
 var loaded = false;
 raster.on('load', function() {
 	loaded = true;
@@ -14,7 +14,7 @@ var lastPos = view.center;
 function moveHandler(event) {
 	if (!loaded)
 		return;
-	if (lastPos.getDistance(event.point) < 10)
+	if (lastPos.getDistance(event.point) < 0.01)
 		return;
 	lastPos = event.point;
 

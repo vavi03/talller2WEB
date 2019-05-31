@@ -10,7 +10,11 @@
     <link rel="stylesheet" href="./styles/libs/swiper.css">
     <link rel="stylesheet" href="./styles/libs/hover.css">
     <link rel="stylesheet" href="./styles/main.css">
-  
+    <!-- Aqui estan las librerias de paper.js -->
+     <script  type="text/javascript"  src="/paper/paper-full.js"></script>
+    <script type="text/paperscript" src="/js/myScript2.js" canvas="myCanvas2"></script>
+
+    <!-- hasta aqui van las librerias -->
 </head>
 
 <body>
@@ -170,7 +174,16 @@
                 <!-- Add Pagination -->
                 <div class="swiper-pagination swiperEventsPagination"></div>
         </section>
-
+  <!-- interaccion foto monogatari-->
+         <section class="inter">
+            <div class="inter__title">
+                <h1 class="inter__titulo">Interaction</h1>
+            </div>
+             <p class="inter__text">Move the cursor on the image and see who it is!</p>
+            <canvas class="canvas" id="myCanvas2" width="500" height="500" ></canvas>
+           
+        <!--fin interaccion-->
+        </section>
         <section class="top-works">
 
             <div class="top-works__title">
@@ -385,15 +398,7 @@
             </div>
 
         </section>
-        <!-- interaccion foto monogatari-->
-         <section class="interaccion">
-            <div class="events__title">
-                <h1 class="events__titulo">Interaction</h1>
-            </div>
-            <canvas id="myCanvas2" width="800" height="500" ></canvas>
-            <p>Move the cursor on the image and see what it does!</p>
-        <!--fin interaccion-->
-        </section>
+      
 
         <section class="contact-us">
 
@@ -440,11 +445,7 @@
         </footer>
 
     </div>
-  <!-- Aqui estan las librerias de paper.js -->
-     <script  type="text/javascript"  src="/paper/paper-full.js"></script>
-    <script type="text/paperscript" src="/js/myScript2.js" canvas="myCanvas2"></script>
 
-    <!-- hasta aqui van las librerias -->
 
     <!--data js-->
     <script src="/js/libs/swiper.js"></script>
